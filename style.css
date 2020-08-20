@@ -1,0 +1,143 @@
+body,
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: inherit;
+  display: block;
+  margin: 3em;
+  text-align: center;
+}
+
+.horizontal-slider.slick-dotted,
+.vertical-slider.slick-dotted {
+  margin-bottom: 0;
+}
+
+.horizontal-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.horizontal-slider .slide .slide-content {
+  background-position: center center;
+
+  /* Background image doesn't tile */
+  background-repeat: no-repeat;
+
+  /* Background image is fixed in the viewport so that it doesn't move when
+     the content's height is greater than the image's height */
+  background-attachment: fixed;
+
+  /* This is what makes the background image rescale based
+     on the container's size */
+  background-size: cover;
+
+}
+
+.vertical-slider {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.vertical-slider > .slick-dots {
+  bottom: auto;
+  left: .5em;
+  padding: 0;
+  right: auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: auto;
+}
+.vertical-slider > .slick-dots li {
+  display: block;
+  margin: 0 .125em;
+}
+.vertical-slider > .slick-dots li button {
+  padding: .125em;
+}
+.vertical-slider .slide {
+  height: 100vh;
+}
+
+.slide {
+  color: #fff;
+  display: inline-block;
+}
+
+.vertical-slide:nth-child(1n) {
+
+  background-color: #464646;
+
+}
+.vertical-slide:nth-child(2n) {
+  background-color: dodgerblue;
+}
+.vertical-slide:nth-child(3n) {
+  background-color: burlywood;
+}
+.vertical-slide:nth-child(4n) {
+  background-color: sandybrown;
+}
+
+.slide-content {
+  display: block;
+  position: relative;
+}
+
+.slick-dots {
+  bottom: 0;
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: auto;
+}
+.slick-dots li button::before {
+  color: #fff;
+}
+.slick-dots li.slick-active button::before {
+  color: #fff;
+}
+
+.slick-prev,
+.slick-next {
+  z-index: 10;
+}
+
+.slick-next {
+  right: 35px;
+}
+
+.slick-prev {
+  left: 35px;
+}
+
+.slide-content img {
+  /* Location of the image */
+  /*background-image: url(background-photo.jpg);*/
+
+  /* Background image is centered vertically and horizontally at all times */
+  background-position: center center;
+
+  /* Background image doesn't tile */
+  background-repeat: no-repeat;
+
+  /* Background image is fixed in the viewport so that it doesn't move when
+     the content's height is greater than the image's height */
+  background-attachment: fixed;
+
+  /* This is what makes the background image rescale based
+     on the container's size */
+  background-size: cover;
+
+  /* Set a background color that will be displayed
+     while the background image is loading */
+  background-color: #464646;
+  height:100vh
+}
